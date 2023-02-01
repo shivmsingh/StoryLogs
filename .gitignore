@@ -1,2 +1,4 @@
+# Adding node modules to the git ignore to save memory.
 node_modules
+# Adding config file to git ignore to preserve security information.
 config/config.env
