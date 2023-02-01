@@ -1,5 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
+//Provide schema for the stories
 const StorySchema = new mongoose.Schema({
   title: {
     type: String,
@@ -12,17 +13,17 @@ const StorySchema = new mongoose.Schema({
   },
   status: {
     type: String,
-    default: 'public',
-    enum: ['public', 'private'],
+    default: "public",
+    enum: ["public", "private"],
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
+    ref: "User",
   },
   createdAt: {
     type: Date,
     default: Date.now,
   },
-})
+});
 
-module.exports = mongoose.model('Story', StorySchema)
+module.exports = mongoose.model("Story", StorySchema);

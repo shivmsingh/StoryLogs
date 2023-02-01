@@ -1,5 +1,6 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
+//Provide Schema for a user
 const UserSchema = new mongoose.Schema({
   googleId: {
     type: String,
@@ -24,6 +25,6 @@ const UserSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
-})
+});
 
-module.exports = mongoose.model('User', UserSchema)
+module.exports = mongoose.model("User", UserSchema);
