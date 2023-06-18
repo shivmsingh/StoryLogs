@@ -97,9 +97,10 @@ app.use("/", require("./routes/index"));
 app.use("/auth", require("./routes/auth"));
 app.use("/stories", require("./routes/stories"));
 
-const PORT = 0.0.0.0:$PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(
   PORT,
+  "0.0.0.0",
   console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`)
 );
